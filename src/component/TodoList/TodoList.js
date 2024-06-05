@@ -1,26 +1,14 @@
-import React, { useState ,useEffect } from 'react'
-import EditNoteIcon from '@mui/icons-material/EditNote';
+import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
-import style from './todolist.css'
-import { v4 as uuidv4 } from 'uuid';
 import DoneIcon from '@mui/icons-material/Done';
 import HourglassBottomIcon from '@mui/icons-material/HourglassBottom';
 
 
 
-
-
-
 export default function TodoList({ todoList, settodoList, setcreateText }) {
    
-    const [reRender, setreRender] = useState(false)
 
-    useEffect(()=>{
-
-        setreRender(!reRender)
-
-    } , [todoList])
-
+   
 
     console.log("🚀 ~ TodoList ~ todoList:", todoList)
 
@@ -40,7 +28,7 @@ export default function TodoList({ todoList, settodoList, setcreateText }) {
 
     function EditTask(Idx) {
         let index = todoList.findIndex((ele, id) => {
-            return ele.id == Idx  
+            return ele.id === Idx  
 
         })
 
@@ -59,7 +47,7 @@ export default function TodoList({ todoList, settodoList, setcreateText }) {
 
     function TaskStatus(Idx){
         let index = todoList.findIndex((ele, id) => {
-            return ele.id == Idx  
+            return ele.id === Idx  
 
         })
 
@@ -84,7 +72,7 @@ export default function TodoList({ todoList, settodoList, setcreateText }) {
                 <div className={"mainList"}>
                     {todoList.length && todoList.map((item, id) => {
                         return (
-                            <div  className={`subList ${item.statusTask == "Completed" ? "CompletedCss" : item.statusTask  == "InProcess" ?  "inprogressCss" : "tobepickedCss"}`}>
+                            <div  className={`subList ${item.statusTask === "Completed" ? "CompletedCss" : item.statusTask  === "InProcess" ?  "inprogressCss" : "tobepickedCss"}`}>
 
                                 <p key={id}  className={"textmsg"}  >{item.text}  </p>
                                 <span className='Icons'> 
