@@ -1,0 +1,40 @@
+.mainList{
+    height: 100%;
+    width: 365px;
+    border: 1px solid rgb(2, 14, 26);
+    margin: auto;
+
+    
+}
+
+.subList{
+    justify-content: center;
+    display: flex;
+    /* margin: auto; */
+    border: 1px solid #615959;
+}
+
+.textmsg{
+    text-align: center;
+    /* margin: 10px; */
+    flex-grow: 8;
+}
+.Icons{
+    padding: 10px;
+}
+
+.tobepickedCss{
+    background-color:#999999;
+}
+
+
+.inprogressCss{
+    background-color:#db9d0b;
+
+}
+
+
+.CompletedCss{
+    background-color:#298929;
+
+}

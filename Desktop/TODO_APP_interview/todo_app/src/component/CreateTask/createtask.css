@@ -1,0 +1,28 @@
+.mainDiv{
+    text-align: center;
+    border: 10px;
+    
+}
+
+
+.mainInput{
+    height: 100%;
+    width: 100%;
+    padding-right: 10px;
+    /* position: relative; */
+}
+
+
+.innerdiv{
+    position: relative;
+    height: 51px;
+    width: 377px;
+    margin: auto;
+}
+
+.add{
+    position: absolute;
+    top: 15px;
+    right: 10px;
+
+}
