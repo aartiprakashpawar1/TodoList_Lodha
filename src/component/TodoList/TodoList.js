@@ -73,7 +73,7 @@ export default function TodoList({ todoList, settodoList, setcreateText }) {
                 <div className={"mainList"}>
                     {todoList.length && todoList.map((item, id) => {
                         return (
-                            <div  className={`subList ${item.statusTask === "Completed" ? "CompletedCss" : item.statusTask  == "InProcess" ?  "inprogressCss" : "tobepickedCss"}`}>
+                            <div  className={`subList ${item.statusTask === "Completed" ? "CompletedCss" : item.statusTask  === "InProcess" ?  "inprogressCss" : "tobepickedCss"}`}>
 
                                 <p key={id}  className={"textmsg"}  >{item.text}  </p>
                                 <span className='Icons'> 
